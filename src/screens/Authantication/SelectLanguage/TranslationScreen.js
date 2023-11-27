@@ -30,11 +30,8 @@ const Translation = props => {
   };
 
   const gotoGetStartedScreen = async () => {
-    // AsyncStorage.setItem('language', data);
-
     try {
       const lang = await AsyncStorage.getItem('language');
-
       if (!lang) {
         AsyncStorage.setItem('language', 'en');
       }
