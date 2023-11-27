@@ -44,10 +44,9 @@ const ProductItemList = (props) => {
 
   return (
     <Container>
+      <View style={{ height: SH(30) }} />
       <Spacing />
-      <Text>
-        {'\n'}
-      </Text>
+      
       <AppHeader Iconname={true} headerTitle={t("Product_List")} onPress={() => navigation.navigate(RouteName.HOME_SCREEN)} />
       <View style={[ProductItemListStyles.minstyleviewphotograpgy, ProductItemListStyles.bgcolorset]}>
         <ScrollView >
