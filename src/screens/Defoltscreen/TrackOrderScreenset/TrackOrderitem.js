@@ -17,6 +17,9 @@ const TrackOrderitem = (props) => {
   return (
     <View style={TrackOrderScreens.minstyleviewphotograpgy}>
       <Spacing />
+      <Text>
+        {'\n'}
+      </Text>
       <AppHeader Iconname={true} headerTitle={t("Track_Order_Label")} onPress={() => navigation.navigate(RouteName.HOME_SCREEN)} />
       <ScrollView
         keyboardShouldPersistTaps="handled"
