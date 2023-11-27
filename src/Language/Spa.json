@@ -491,14 +491,14 @@
     "Credit_Card_Label": "Tarjeta de crédito",
     "Payment_SuccessFul_Labe": "Pago exitoso",
     "All_Settings": "Todas las configuraciones",
-    "Username_Or_Mobile_Number_Label":"Nombre de usuario o número de móvil",
+    "Username_Or_Mobile_Number_Label": "Nombre de usuario o número de móvil",
     "Log_Facebook_Label": "Iniciar sesión con Facebook",
     "Log_Google_Label": "Iniciar sesión con Google",
     "Confirm_Location_Label": "Confirmar ubicación",
     "Fast_food_Chinese_Label": "Comida rápida, China",
     "Arabian_Lebanese_Label": "Árabe, libanés",
     "Rescued_Burger_Label": "Rescatado · Comida rápida · Hamburguesa",
-    "Missal_kolhapuri_Label":"Missal Pav (kolhapuri)",
+    "Missal_kolhapuri_Label": "Missal Pav (kolhapuri)",
     "Maggi_Bhajiya_Label": "Maggi Bhajiya",
     "Regular_Bread_Pafoda_Label": "Pan Regular Pafoda",
     "Regular_Bread_Pakoda_Label": "Pan Regular Pakoda",
@@ -638,6 +638,7 @@
     "Out_Of_Stock_Label4": "Hasta un 60 % de descuento",
     "Avil_25_Tablet_Label": "Tableta Avil 25",
     " Galenika Bensedin 10mg Diazepam": "Galenika Bensedin 10mg Diazepam",
+    "Galenika Bensedin 10mg Diazepam": "Galenika Bensedin 10mg Diazepam",
     "MabThera_Rituxan_Pharmacy_Label": "Farmacia MabThera/Rituxan",
     "Harvoni_Pharmacy_Label": "Farmacia Harvoni",
     "Co codamol/codeine 30mg/500": "Tableta Lasix",
@@ -666,7 +667,5 @@
     "Longtitle_Label_2": "Garantía de Calidad",
     "Longtitle_Label_3": "Sin compra mínima",
     "Rating_Label": "Clasificación"
-
-
   }
 }
