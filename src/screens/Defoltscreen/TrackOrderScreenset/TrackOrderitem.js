@@ -17,11 +17,17 @@ const TrackOrderitem = (props) => {
   return (
     <View style={TrackOrderScreens.minstyleviewphotograpgy}>
       <Spacing />
+      <Text>
+        {'\n'}
+      </Text>
       <AppHeader Iconname={true} headerTitle={t("Track_Order_Label")} onPress={() => navigation.navigate(RouteName.HOME_SCREEN)} />
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={TrackOrderScreens.contentContainerStyle}>
-        <KeyboardAvoidingView enabled>
+        <View style={TrackOrderScreens.setviewwoidth70}>
+          <Text style={TrackOrderScreens.settextcolor}>{"No Orders Available"}{'\n'}</Text>
+        </View>
+        {/* <KeyboardAvoidingView enabled>
           <View style={TrackOrderScreens.minflexview}>
             <View style={TrackOrderScreens.minviewsigninscreen}>
               <View style={TrackOrderScreens.trackorderviewwhite}>
@@ -64,7 +70,7 @@ const TrackOrderitem = (props) => {
               </View>
             </View>
           </View>
-        </KeyboardAvoidingView>
+        </KeyboardAvoidingView> */}
       </ScrollView>
     </View>
   );

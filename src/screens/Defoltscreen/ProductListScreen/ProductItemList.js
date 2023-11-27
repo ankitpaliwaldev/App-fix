@@ -11,7 +11,7 @@ import { price_symbol_action } from '../../../redux/action/CommonAction';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@react-navigation/native';
 import { Spacing, ProductListFun, AppHeader, Container } from "../../../components";
-import {add_cart} from '../../../redux/action/cartAction';
+import { add_cart } from '../../../redux/action/cartAction';
 
 const ProductItemList = (props) => {
   const { pricesymboldata } = useSelector(state => state.commonReducer) || {};
@@ -21,7 +21,7 @@ const ProductItemList = (props) => {
   const ProductItemListStyles = useMemo(() => ProductItemListStyle(Colors), [Colors]);
   const dispatch = useDispatch();
   const [liked, setLiked] = useState([]);
-  const {cartData} = useSelector(state => state.cartInfo)
+  const { cartData } = useSelector(state => state.cartInfo)
 
   let PriceSymbol = '£';
 
@@ -44,10 +44,12 @@ const ProductItemList = (props) => {
 
   return (
     <Container>
+      <View style={{ height: SH(30) }} />
       <Spacing />
       <AppHeader Iconname={true} headerTitle={t("Product_List")} onPress={() => navigation.navigate(RouteName.HOME_SCREEN)} />
       <View style={[ProductItemListStyles.minstyleviewphotograpgy, ProductItemListStyles.bgcolorset]}>
         <ScrollView >
+
           <View style={ProductItemListStyles.minflexview}>
             <FlatList
               data={Docterproductdata}
