@@ -24,7 +24,10 @@ const TrackOrderitem = (props) => {
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={TrackOrderScreens.contentContainerStyle}>
-        <KeyboardAvoidingView enabled>
+        <View style={TrackOrderScreens.setviewwoidth70}>
+          <Text style={TrackOrderScreens.settextcolor}>{"No Orders Available"}{'\n'}</Text>
+        </View>
+        {/* <KeyboardAvoidingView enabled>
           <View style={TrackOrderScreens.minflexview}>
             <View style={TrackOrderScreens.minviewsigninscreen}>
               <View style={TrackOrderScreens.trackorderviewwhite}>
@@ -67,7 +70,7 @@ const TrackOrderitem = (props) => {
               </View>
             </View>
           </View>
-        </KeyboardAvoidingView>
+        </KeyboardAvoidingView> */}
       </ScrollView>
     </View>
   );
