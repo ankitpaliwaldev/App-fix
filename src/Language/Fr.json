@@ -491,14 +491,14 @@
     "Credit_Card_Label": "Carte de crédit",
     "Payment_SuccessFul_Labe": "Paiement réussi",
     "All_Settings": "Tous les paramètres",
-    "Username_Or_Mobile_Number_Label":"Nom d'utilisateur ou numéro de portable",
+    "Username_Or_Mobile_Number_Label": "Nom d'utilisateur ou numéro de portable",
     "Log_Facebook_Label": "Se connecter avec Facebook",
     "Log_Google_Label": "Se connecter avec Google",
     "Confirm_Location_Label": "Confirmer l'emplacement",
     "Fast_food_Chinese_Label": "Restauration rapide, chinois",
     "Arabian_Lebanese_Label": "Arabe, Libanais",
     "Rescued_Burger_Label": "Sauvé · Restauration rapide · Burger",
-    "Missal_kolhapuri_Label":"Missal Pav (kolhapuri)",
+    "Missal_kolhapuri_Label": "Missal Pav (kolhapuri)",
     "Maggi_Bhajiya_Label": "Maggi Bhajiya",
     "Regular_Bread_Pafoda_Label": "Pafoda de pain ordinaire",
     "Regular_Bread_Pakoda_Label": "Pakoda de pain ordinaire",
@@ -638,6 +638,7 @@
     "Out_Of_Stock_Label4": "Jusqu'à 60 % de réduction",
     "Avil_25_Tablet_Label": "Avil 25 Tablet",
     " Galenika Bensedin 10mg Diazepam": "Normaxin Comprimé",
+    "Galenika Bensedin 10mg Diazepam": "Normaxin Comprimé",
     "MabThera_Rituxan_Pharmacy_Label": "Pharmacie MabThera/Rituxan",
     "Harvoni_Pharmacy_Label": "Pharmacie Harvoni",
     "Co codamol/codeine 30mg/500": "Comprimé Lasix",
@@ -666,6 +667,5 @@
     "Longtitle_Label_2": "Assurance qualité",
     "Longtitle_Label_3": "Aucun minimum d'achat",
     "Rating_Label": "Notation"
-
   }
 }
