@@ -44,12 +44,12 @@ const ProductDetailesScreen = ({ route }, props) => {
         <KeyboardAvoidingView enabled>
           <View style={[DetailsScreenStyles.minflexview, DetailsScreenStyles.bgcolorset]} >
             <View style={[DetailsScreenStyles.minviewsigninscreen, DetailsScreenStyles.bgcolorset]}>
-              <TouchableOpacity style={DetailsScreenStyles.flrxfireiocnview} onPress={() => navigation.navigate(RouteName.RATING_SCREEN_SET)}>
+              {/* <TouchableOpacity style={DetailsScreenStyles.flrxfireiocnview} onPress={() => navigation.navigate(RouteName.RATING_SCREEN_SET)}>
                 <TouchableOpacity style={DetailsScreenStyles.setdotflex}>
                   <Text style={DetailsScreenStyles.caltextstyle}>4.5</Text>
                   <Text><VectoreIcons icon="Entypo" name="star" color={Colors.white_text_color} size={SF(19)} /></Text>
                 </TouchableOpacity>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
               <View style={DetailsScreenStyles.setimagestylewidth}>
                 <Image style={DetailsScreenStyles.imagsetstyle} source={img} />
               </View>
@@ -61,10 +61,10 @@ const ProductDetailesScreen = ({ route }, props) => {
                 </View>
               </TouchableOpacity>
               <View style={[DetailsScreenStyles.bgwhiteboxminview, DetailsScreenStyles.bgcolorset]} >
-                <View style={DetailsScreenStyles.bgwhiteboxsmall}>
+                {/* <View style={DetailsScreenStyles.bgwhiteboxsmall}>
                   <Text style={DetailsScreenStyles.settextweight}>{t(title)}</Text>
-                </View>
-                {hearticonset === 0 ?
+                </View> */}
+                {/* {hearticonset === 0 ?
                   <TouchableOpacity onPress={() => sethearticonset(1)} style={[DetailsScreenStyles.HeartIconLike, DetailsScreenStyles.setbgcolorborder]}>
                     <VectoreIcons icon="FontAwesome" name="heart" size={SF(25)} color={Colors.theme_background} />
                   </TouchableOpacity>
@@ -72,21 +72,17 @@ const ProductDetailesScreen = ({ route }, props) => {
                   <TouchableOpacity onPress={() => sethearticonset(0)} style={[DetailsScreenStyles.HeartIconLike, DetailsScreenStyles.setbgcolorborder]}>
                     <VectoreIcons icon="FontAwesome" name="heart-o" size={SF(25)} color={Colors.black_text_color} />
                   </TouchableOpacity>
-                }
+                } */}
 
                 <View style={[DetailsScreenStyles.setallpading, DetailsScreenStyles.bgcolorset]}>
                   <View style={[DetailsScreenStyles.descripitionviewone, DetailsScreenStyles.bgcolorset]}>
-                    <Text style={DetailsScreenStyles.descriptiontextset}>{t("Description_Label")}</Text>
+                    <Text style={DetailsScreenStyles.descriptiontextset}>{"Product Description"}</Text>
                     <Text style={DetailsScreenStyles.paregraphtextset}>{t("Discription_Item_Label")}</Text>
-                    <View style={DetailsScreenStyles.thretexztflexview}>
-                      <View style={DetailsScreenStyles.flexclockandtext}>
-                        <Text style={DetailsScreenStyles.paregraphtextsettwo}>{t(hname)}</Text>
-                      </View>
-                    </View>
+
                   </View>
                   <View style={[DetailsScreenStyles.descripitionviewtwo, DetailsScreenStyles.bgcolorset]}>
                     <View style={DetailsScreenStyles.borderbottomview}>
-                      <Text style={DetailsScreenStyles.nuteialtext}>{t("Nutritional_Value_Label")}</Text>
+                      <Text style={DetailsScreenStyles.nuteialtext}>{"Additional Info:"}</Text>
                       <View style={DetailsScreenStyles.flextextset}>
                         <Text style={DetailsScreenStyles.proteintextset}>{t("Protein_Label")}</Text>
                         <Text style={DetailsScreenStyles.setdigitaltextview}>2.5{t("gLabel")}</Text>
@@ -118,7 +114,7 @@ const ProductDetailesScreen = ({ route }, props) => {
                   <View>
                   </View>
                 </View>
-                <View style={[DetailsScreenStyles.setwidthbox, DetailsScreenStyles.bgcolorset]}>
+                {/* <View style={[DetailsScreenStyles.setwidthbox, DetailsScreenStyles.bgcolorset]}>
                   <View style={DetailsScreenStyles.setboxshadowimage}>
                     <Text style={DetailsScreenStyles.smalltextsetingredients}>{t("Ingredients_Label")}</Text>
                     <FlatList
@@ -130,12 +126,12 @@ const ProductDetailesScreen = ({ route }, props) => {
                       style={DetailsScreenStyles.setflex}
                     />
                   </View>
-                </View>
-                <View style={[DetailsScreenStyles.setminviewwidth, DetailsScreenStyles.bgcolorset]}>
-                  <Text style={DetailsScreenStyles.additionstextstyletwo}>{t("Additions_Label")}</Text>
+                </View> */}
+                {/* <View style={[DetailsScreenStyles.setminviewwidth, DetailsScreenStyles.bgcolorset]}>
+                  <Text style={DetailsScreenStyles.additionstextstyletwo}>{"Quantity:"}</Text>
                   <TouchableOpacity style={DetailsScreenStyles.setdropdownstyle} onPress={() => setModalVisibletwo(true)}>
                     {sleact === '' ?
-                      <Text style={DetailsScreenStyles.additionstextstyle}>{t("AntiD_Injection_Label")}</Text>
+                      <Text style={DetailsScreenStyles.additionstextstyle}>{"Select Quantity"}</Text>
                       :
                       <Text style={DetailsScreenStyles.additionstextstyle}>{t(sleact)}</Text>
                     }
@@ -167,7 +163,7 @@ const ProductDetailesScreen = ({ route }, props) => {
                       </View>
                     </View>
                   </Modal>
-                </View>
+                </View> */}
               </View>
               <View>
               </View>
