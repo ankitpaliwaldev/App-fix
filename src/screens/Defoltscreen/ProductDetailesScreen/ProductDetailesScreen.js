@@ -197,7 +197,7 @@ const ProductDetailesScreen = ({route}, props) => {
                         {t('Rich_in_Vitamin_Label')}
                       </Text> */}
                     </View>
-                    <View style={DetailsScreenStyles.thretexztflexviewtwo}>
+                    {/* <View style={DetailsScreenStyles.thretexztflexviewtwo}>
                       <View style={DetailsScreenStyles.flexclockandtextwo}>
                         <VectoreIcons
                           icon="MaterialIcons"
@@ -214,7 +214,7 @@ const ProductDetailesScreen = ({route}, props) => {
                           {t('Daily_value_Label')}
                         </Text>
                       </View>
-                    </View>
+                    </View> */}
                   </View>
                   <View />
                 </View>
