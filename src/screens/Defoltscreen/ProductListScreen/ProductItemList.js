@@ -85,6 +85,9 @@ const ProductItemList = props => {
                       sku: item.SKU,
                       name: item.name,
                       description: item.description,
+                      category: item.category,
+                      tags: item.tags,
+                      price: item.price,
                     })
                   }
                   pricesymboldata={pricesymboldata}

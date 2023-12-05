@@ -25,7 +25,17 @@ import {
 } from '../../../components';
 
 const ProductDetailesScreen = ({route}, props) => {
-  const {img, title, hname, description = ''} = route.params;
+  const {
+    img,
+    title,
+    hname,
+    description = '',
+    sku = '',
+    category = '',
+    tags = '',
+    price = '',
+  } = route.params;
+  const currentPrice = price?.split(' – ')?.[0]?.replace('£', '') || 0;
   const [count, setCount] = useState(1);
   const {doctoreDetaile} = useSelector(state => state.doctorDataReducer) || {
     doctoreDetaile,
@@ -82,7 +92,11 @@ const ProductDetailesScreen = ({route}, props) => {
                 </TouchableOpacity>
               </TouchableOpacity> */}
               <View style={DetailsScreenStyles.setimagestylewidth}>
-                <Image style={DetailsScreenStyles.imagsetstyle} source={img} />
+                {/* <Image style={DetailsScreenStyles.imagsetstyle} source={img} /> */}
+                <Image
+                  style={DetailsScreenStyles.imagsetstyle}
+                  source={{uri: img}}
+                />
               </View>
               <TouchableOpacity
                 onPress={() => backarrow()}
@@ -145,29 +159,33 @@ const ProductDetailesScreen = ({route}, props) => {
                       </Text>
                       <View style={DetailsScreenStyles.flextextset}>
                         <Text style={DetailsScreenStyles.proteintextset}>
-                          {t('Protein_Label')}
+                          {'SKU'}
                         </Text>
                         <Text style={DetailsScreenStyles.setdigitaltextview}>
-                          2.5{t('gLabel')}
+                          {sku}
                         </Text>
                       </View>
                       <View style={DetailsScreenStyles.flextextset}>
                         <Text style={DetailsScreenStyles.proteintextset}>
-                          {t('Carbohydrates_Label')}
+                          {'Category'}
                         </Text>
                         <Text style={DetailsScreenStyles.setdigitaltextview}>
-                          14.7{t('gLabel')}
+                          {category}
                         </Text>
                       </View>
                       <View style={DetailsScreenStyles.flextextset}>
                         <Text style={DetailsScreenStyles.proteintextset}>
-                          {t('Sodium_Label')}
+                          {'Tags'}
                         </Text>
-                        <Text style={DetailsScreenStyles.setdigitaltextview}>
-                          19%*
+                        <Text
+                          style={[
+                            DetailsScreenStyles.setdigitaltextview,
+                            {flex: 1, textAlign: 'right'},
+                          ]}>
+                          {tags}
                         </Text>
                       </View>
-                      <View style={DetailsScreenStyles.flextextset}>
+                      {/* <View style={DetailsScreenStyles.flextextset}>
                         <Text style={DetailsScreenStyles.proteintextset}>
                           {t('Potassium_Label')}
                         </Text>
@@ -177,7 +195,7 @@ const ProductDetailesScreen = ({route}, props) => {
                       </View>
                       <Text style={DetailsScreenStyles.proteintextset}>
                         {t('Rich_in_Vitamin_Label')}
-                      </Text>
+                      </Text> */}
                     </View>
                     <View style={DetailsScreenStyles.thretexztflexviewtwo}>
                       <View style={DetailsScreenStyles.flexclockandtextwo}>
@@ -259,7 +277,7 @@ const ProductDetailesScreen = ({route}, props) => {
       <View style={DetailsScreenStyles.setbgcolorviewtwo}>
         <TouchableOpacity style={DetailsScreenStyles.setwidthprice}>
           <Text style={DetailsScreenStyles.pricetextsetviewtwo}>
-            {pricesymboldata} {125 * count}
+            {pricesymboldata} {currentPrice * count}
           </Text>
         </TouchableOpacity>
         <View style={DetailsScreenStyles.plusandminusflexview}>
