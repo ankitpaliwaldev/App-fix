@@ -52,13 +52,16 @@ const CreditCardScreen = props => {
     // }
 
     const handlePayment = async () => {
+
+        const { firstName, lastName, email, postalCode, Billing_Address, Shipping_Address } = userData; // Assuming you have collected user data somewhere
+
         let apiData = {
             amount: 500,
-            currency: "INR"
+            currency: "EUR"
         }
+
         let itemName = []
         let itemSKU = []
-
         cartData.forEach(cart => {
             itemName.push(cart.name)
             itemSKU.push(cart.SKU)
@@ -68,7 +71,15 @@ const CreditCardScreen = props => {
             orderDate: new Date(),
             items: itemName,
             SKUs: itemSKU,
-            total: totalAmount
+            total: totalAmount,
+            firstName,
+            lastName,
+            email,
+            postalCode,
+            Billing_Address,
+            Shipping_Address
+
+
         }
 
         console.log('----', myOrderDetails)
