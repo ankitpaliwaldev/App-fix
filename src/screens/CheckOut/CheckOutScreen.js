@@ -1,13 +1,13 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
-  Text,
+  Text, TextInput, StyleSheet,
   View,
   ScrollView,
   KeyboardAvoidingView,
   TouchableOpacity,
   FlatList,
 } from 'react-native';
-import {CartTabStyle} from '../../styles';
+import { CartTabStyle } from '../../styles';
 import {
   Button,
   ConfirmationAlert,
@@ -17,24 +17,24 @@ import {
   Input,
   AppHeader,
 } from '../../components';
-import {RouteName} from '../../routes';
-import {useSelector, useDispatch} from 'react-redux';
-import {price_symbol_action} from '../../redux/action/CommonAction';
-import {useTranslation} from 'react-i18next';
-import {useTheme} from '@react-navigation/native';
-import {SH, SF, Colors, checkoutItemData} from '../../utils';
+import { RouteName } from '../../routes';
+import { useSelector, useDispatch } from 'react-redux';
+import { price_symbol_action } from '../../redux/action/CommonAction';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '@react-navigation/native';
+import { SH, SF, Colors, checkoutItemData } from '../../utils';
 import images from '../../index';
 
 const CheckOutScreen = props => {
-  const {cartData: cartDataInfo} = useSelector(state => state.cartInfo);
-  const {navigation} = props;
-  const {t} = useTranslation();
-  const {Colors} = useTheme();
+  const { cartData: cartDataInfo } = useSelector(state => state.cartInfo);
+  const { navigation } = props;
+  const { t } = useTranslation();
+  const { Colors } = useTheme();
   const CartTabStyles = useMemo(() => CartTabStyle(Colors), [Colors]);
-  const {doctoreDetaile} = useSelector(state => state.doctorDataReducer) || {
+  const { doctoreDetaile } = useSelector(state => state.doctorDataReducer) || {
     doctoreDetaile,
   };
-  const {pricesymboldata} = useSelector(state => state.commonReducer) || {};
+  const { pricesymboldata } = useSelector(state => state.commonReducer) || {};
   const [alertVisibleUpdate, setAlertVisibleUpdate] = useState(false);
   const [alertMessageUpdate, setAlertMessageUpdate] = useState('');
   const [count, setCount] = useState(1);
@@ -67,10 +67,44 @@ const CheckOutScreen = props => {
   const profileUpdate = () => {
     navigation.navigate(RouteName.CHECK_OUT);
   };
+
+  //input user data
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postCode, setPostCode] = useState('');
+  const [contact, setContact] = useState('');
+
+
+  const handleContactChange = text => {
+    // Allow only numbers in contact field
+    if (/^\d+$/.test(text) || text === '') {
+      setContact(text);
+    }
+  };
+
+  const handleEmailChange = text => {
+    // Validate email format
+    setEmail(text);
+  };
+
+  const handleSubmit = () => {
+    // Perform form submission/validation here
+    if (!name || !email || !address || !city || !postCode || !contact) {
+      Alert.alert('Please fill in all fields');
+      return;
+    }
+  };
+
+
   return (
     <View
       style={[CartTabStyles.minstyleviewphotograpgy, CartTabStyles.bgcolorset]}>
       <Spacing />
+      <Text>
+        {'\n'}
+      </Text>
       <AppHeader
         Iconname={true}
         headerTitle={t('Checkout_Label')}
@@ -106,7 +140,7 @@ const CheckOutScreen = props => {
                     </View>
                   </View>
                 </View>
-                <View style={CartTabStyles.bgcolorhomeaddresh}>
+                {/* <View style={CartTabStyles.bgcolorhomeaddresh}>
                   <View style={CartTabStyles.minflehomeandedit}>
                     <View style={CartTabStyles.flexhomeaddresh}>
                       <View>
@@ -138,13 +172,83 @@ const CheckOutScreen = props => {
                       />
                     </TouchableOpacity>
                   </View>
+                </View> */}
+                {/* <View style={{ marginVertical: 10 }} />
+                <View >
+                  <Input
+                    placeholder={'Enter Name:'}
+                    onChangeText={text => setName(text)}
+                    value={name}
+                  />
+                  <View style={{ marginVertical: 10 }} />
+                  <Input
+                    placeholder={'Enter Email:'}
+                    onChangeText={text => setEmail(text)}
+                    value={email}
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                  />
+                  <View style={{ marginVertical: 10 }} />
+                  <Input
+                    placeholder={'Enter Address:'}
+                    onChangeText={text => setAddress(text)}
+                    value={address}
+                  />
+                  <View style={{ marginVertical: 10 }} />
+                  <Input
+                    placeholder={'Enter City/Town:'}
+                    onChangeText={text => setCity(text)}
+                    value={city}
+                  /><View style={{ marginVertical: 10 }} />
+                  <Input
+                    placeholder={'Enter Postcode:'}
+                    onChangeText={text => setPostCode(text)}
+                    value={postCode}
+                  />
+                  <View style={{ marginVertical: 10 }} />
+                  <Input
+                    placeholder={'Enter Contact number:'}
+                    onChangeText={text => setContact(text)}
+                    value={contact}
+                    keyboardType="numeric"
+                  />
+                </View> */}
+                {/* <View style={{ marginVertical: 10 }} />
+                <View style={CartTabStyles.containerStyle}>
+                  <Input
+                    placeholder={'Enter email:'}
+                    onChangeText={text => onChangeText(text)}
+                    value={value}
+                    containerStyle={CartTabStyles.inputContainerStyle}
+                    inputContainerStyle={[
+                      CartTabStyles.inputInContainerStyle
+                    ]}
+                  />
                 </View>
+                <View style={{ marginVertical: 10 }} />
+                <View style={CartTabStyles.containerStyle}>
+                  <Input
+                    placeholder={'Enter address:'}
+                    onChangeText={text => onChangeText(text)}
+                    value={value}
+                    containerStyle={CartTabStyles.inputContainerStyle}
+                    inputContainerStyle={[
+                      CartTabStyles.inputInContainerStyle
+                    ]}
+                  />
+                </View> */}
+
+
                 <Spacing space={SH(20)} />
                 <View style={CartTabStyles.padH20}>
                   {cartDataInfo && (
                     <FlatList
                       data={cartDataInfo}
+<<<<<<< Updated upstream
                       renderItem={({item, index}) => (
+=======
+                      renderItem={({ item, index }) => (
+>>>>>>> Stashed changes
                         <CheckOutFlatFun
                           item={item}
                           onPress={() =>
@@ -310,4 +414,6 @@ const CheckOutScreen = props => {
     </View>
   );
 };
+
+
 export default CheckOutScreen;

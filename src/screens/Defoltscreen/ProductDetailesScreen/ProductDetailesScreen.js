@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React, {useState, useEffect, useMemo} from 'react';
+=======
+import React, { useState, useEffect, useMemo } from 'react';
+>>>>>>> Stashed changes
 import {
   Text,
   View,
@@ -10,6 +14,7 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from 'react-native';
+<<<<<<< Updated upstream
 import {DetailsScreenStyle} from '../../../styles';
 import {SF, SH, Colors, Fooditemname, additionData} from '../../../utils';
 import {useNavigation} from '@react-navigation/native';
@@ -18,13 +23,27 @@ import {useSelector, useDispatch} from 'react-redux';
 import {price_symbol_action} from '../../../redux/action/CommonAction';
 import {useTranslation} from 'react-i18next';
 import {useTheme} from '@react-navigation/native';
+=======
+import { DetailsScreenStyle } from '../../../styles';
+import { SF, SH, Colors, Fooditemname, additionData } from '../../../utils';
+import { useNavigation } from '@react-navigation/native';
+import { RouteName } from '../../../routes';
+import { useSelector, useDispatch } from 'react-redux';
+import { price_symbol_action } from '../../../redux/action/CommonAction';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '@react-navigation/native';
+>>>>>>> Stashed changes
 import {
   VectoreIcons,
   SelectOptionFlatFun,
   IngedientsFlatList,
 } from '../../../components';
 
+<<<<<<< Updated upstream
 const ProductDetailesScreen = ({route}, props) => {
+=======
+const ProductDetailesScreen = ({ route }, props) => {
+>>>>>>> Stashed changes
   const {
     img,
     title,
@@ -37,10 +56,17 @@ const ProductDetailesScreen = ({route}, props) => {
   } = route.params;
   const currentPrice = price?.split(' – ')?.[0]?.replace('£', '') || 0;
   const [count, setCount] = useState(1);
+<<<<<<< Updated upstream
   const {doctoreDetaile} = useSelector(state => state.doctorDataReducer) || {
     doctoreDetaile,
   };
   const {pricesymboldata} = useSelector(state => state.commonReducer) || {};
+=======
+  const { doctoreDetaile } = useSelector(state => state.doctorDataReducer) || {
+    doctoreDetaile,
+  };
+  const { pricesymboldata } = useSelector(state => state.commonReducer) || {};
+>>>>>>> Stashed changes
 
   const dispatch = useDispatch();
   let PriceSymbol = '£';
@@ -50,8 +76,13 @@ const ProductDetailesScreen = ({route}, props) => {
   }, []);
 
   const navigation = useNavigation();
+<<<<<<< Updated upstream
   const {t} = useTranslation();
   const {Colors} = useTheme();
+=======
+  const { t } = useTranslation();
+  const { Colors } = useTheme();
+>>>>>>> Stashed changes
   const DetailsScreenStyles = useMemo(
     () => DetailsScreenStyle(Colors),
     [Colors],
@@ -95,7 +126,11 @@ const ProductDetailesScreen = ({route}, props) => {
                 {/* <Image style={DetailsScreenStyles.imagsetstyle} source={img} /> */}
                 <Image
                   style={DetailsScreenStyles.imagsetstyle}
+<<<<<<< Updated upstream
                   source={{uri: img}}
+=======
+                  source={{ uri: img }}
+>>>>>>> Stashed changes
                 />
               </View>
               <TouchableOpacity
@@ -180,7 +215,11 @@ const ProductDetailesScreen = ({route}, props) => {
                         <Text
                           style={[
                             DetailsScreenStyles.setdigitaltextview,
+<<<<<<< Updated upstream
                             {flex: 1, textAlign: 'right'},
+=======
+                            { flex: 1, textAlign: 'right' },
+>>>>>>> Stashed changes
                           ]}>
                           {tags}
                         </Text>

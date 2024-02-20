@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from "react";
 import { View, FlatList, ScrollView, } from "react-native";
@@ -14,6 +15,8 @@ import { useTheme } from '@react-navigation/native';
 import { Spacing, ProductListFun, AppHeader, Container } from "../../../components";
 import { add_cart } from '../../../redux/action/cartAction';
 =======
+=======
+>>>>>>> Stashed changes
 import React, {useState, useEffect, useMemo} from 'react';
 import {View, FlatList, ScrollView} from 'react-native';
 import {ProductItemListStyle} from '../../../styles';
@@ -33,7 +36,10 @@ import {
   Container,
 } from '../../../components';
 import {add_cart} from '../../../redux/action/cartAction';
+<<<<<<< Updated upstream
 >>>>>>> 503f8bd40b2c0c9b6dc1a934189333883b16c6f0
+=======
+>>>>>>> Stashed changes
 
 const ProductItemList = props => {
   const {pricesymboldata} = useSelector(state => state.commonReducer) || {};
@@ -46,11 +52,15 @@ const ProductItemList = props => {
   );
   const dispatch = useDispatch();
   const [liked, setLiked] = useState([]);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   const { cartData } = useSelector(state => state.cartInfo)
 =======
   const {cartData} = useSelector(state => state.cartInfo);
 >>>>>>> 503f8bd40b2c0c9b6dc1a934189333883b16c6f0
+=======
+  const {cartData} = useSelector(state => state.cartInfo);
+>>>>>>> Stashed changes
 
   let PriceSymbol = '£';
 
@@ -73,17 +83,21 @@ const ProductItemList = props => {
 
   return (
     <Container>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <View style={{ height: SH(30) }} />
+=======
+      <View style={{height: SH(30)}} />
+>>>>>>> Stashed changes
       <Spacing />
-      <AppHeader Iconname={true} headerTitle={t("Product_List")} onPress={() => navigation.navigate(RouteName.HOME_SCREEN)} />
-      <View style={[ProductItemListStyles.minstyleviewphotograpgy, ProductItemListStyles.bgcolorset]}>
-        <ScrollView >
 
+<<<<<<< Updated upstream
 =======
       <View style={{height: SH(30)}} />
       <Spacing />
 
+=======
+>>>>>>> Stashed changes
       <AppHeader
         Iconname={true}
         headerTitle={t('Product_List')}
@@ -95,7 +109,10 @@ const ProductItemList = props => {
           ProductItemListStyles.bgcolorset,
         ]}>
         <ScrollView>
+<<<<<<< Updated upstream
 >>>>>>> 503f8bd40b2c0c9b6dc1a934189333883b16c6f0
+=======
+>>>>>>> Stashed changes
           <View style={ProductItemListStyles.minflexview}>
             <FlatList
               data={Docterproductdata}

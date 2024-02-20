@@ -53,7 +53,11 @@ const CreditCardScreen = props => {
 
     const handlePayment = async () => {
 
+<<<<<<< Updated upstream
         const { firstName, lastName, email, postalCode, Billing_Address, Shipping_Address } = userData; // Assuming you have collected user data somewhere
+=======
+        // const { firstName, lastName, email, postalCode, Billing_Address, Shipping_Address } = userData; // Assuming you have collected user data somewhere
+>>>>>>> Stashed changes
 
         let apiData = {
             amount: 500,
@@ -72,12 +76,21 @@ const CreditCardScreen = props => {
             items: itemName,
             SKUs: itemSKU,
             total: totalAmount,
+<<<<<<< Updated upstream
             firstName,
             lastName,
             email,
             postalCode,
             Billing_Address,
             Shipping_Address
+=======
+            // firstName,
+            // lastName,
+            // email,
+            // postalCode,
+            // Billing_Address,
+            // Shipping_Address
+>>>>>>> Stashed changes
 
 
         }
@@ -94,7 +107,11 @@ const CreditCardScreen = props => {
                 let confirmPaymentIntent = await confirmPayment(res?.data?.paymentIntent, { paymentMethodType: 'Card' })
                 console.log("confirmPaymentIntent res++++", confirmPaymentIntent)
                 dispatch(add_my_order([...myOrders, myOrderDetails]))
+<<<<<<< Updated upstream
                 await axios.post("https://justpills.net/wp-json/v1/orders/create", {
+=======
+                await axios.post("https://insomniapillsuk.co/wp-json/v1/orders/create", {
+>>>>>>> Stashed changes
                     myOrderDetails,
                 })
                     .then(console.log)
@@ -108,7 +125,11 @@ const CreditCardScreen = props => {
         } catch (error) {
             console.log("Error rasied during payment intent", error)
             dispatch(add_my_order([...myOrders, myOrderDetails]))
+<<<<<<< Updated upstream
             await axios.post("https://justpills.net/wp-json/v1/orders/create", {
+=======
+            await axios.post("https://insomniapillsuk.co/wp-json/v1/orders/create", {
+>>>>>>> Stashed changes
                 myOrderDetails,
             })
                 .then(console.log)
