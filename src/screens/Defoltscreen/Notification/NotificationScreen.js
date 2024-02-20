@@ -16,7 +16,7 @@ const NotificationScreen = () => {
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={NotificationStyles.contentContainerStyle}>
-        <KeyboardAvoidingView enabled>
+        {/* <KeyboardAvoidingView enabled>
           <View style={NotificationStyles.minflexview}>
             <View style={NotificationStyles.minviewsigninscreen}>
               <TouchableOpacity style={NotificationStyles.flexdiractionrow}>
@@ -39,7 +39,7 @@ const NotificationScreen = () => {
               </TouchableOpacity>
             </View>
           </View>
-        </KeyboardAvoidingView>
+        </KeyboardAvoidingView> */}
       </ScrollView>
     </View>
   );

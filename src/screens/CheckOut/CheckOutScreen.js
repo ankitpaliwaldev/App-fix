@@ -52,10 +52,10 @@ const CheckOutScreen = props => {
   useEffect(() => {
     let total = Number(0);
     setTotalAmount(0);
-    if(cartDataInfo) {
+    if (cartDataInfo) {
       cartDataInfo.forEach(data => {
         total =
-            Number(total) + Number(data.price.split(' – ')[0].replace('£', ''));
+          Number(total) + Number(data.price.split(' – ')[0].replace('£', ''));
       });
     }
     setTotalAmount(total);
@@ -142,20 +142,22 @@ const CheckOutScreen = props => {
                 <Spacing space={SH(20)} />
                 <View style={CartTabStyles.padH20}>
                   {cartDataInfo && (
-                      <FlatList
-                          data={cartDataInfo}
-                          renderItem={({item, index}) => (
-                              <CheckOutFlatFun
-                                  item={item}
-                                  onPress={() =>
-                                      navigation.navigate(RouteName.PRODUCT_DETAILS_SCREEN)
-                                  }
-                                  Applycoupon={Applycoupon}
-                                  pricesymboldata={pricesymboldata}
-                                  count={count}
-                              />
-                          )}
-                      />
+                    <FlatList
+                      data={cartDataInfo}
+                      renderItem={({item, index}) => (
+                        <CheckOutFlatFun
+                          item={item}
+                          onPress={() =>
+                            navigation.navigate(
+                              RouteName.PRODUCT_DETAILS_SCREEN,
+                            )
+                          }
+                          Applycoupon={Applycoupon}
+                          pricesymboldata={pricesymboldata}
+                          count={count}
+                        />
+                      )}
+                    />
                   )}
                   <Spacing space={SH(20)} />
                   <View style={CartTabStyles.textinputandbuttonflex}>
