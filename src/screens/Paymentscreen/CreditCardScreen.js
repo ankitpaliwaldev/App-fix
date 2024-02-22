@@ -67,7 +67,7 @@ const CreditCardScreen = props => {
             itemSKU.push(cart.SKU)
         })
 
-        const myOrderDetails = {
+        /*const myOrderDetails = {
             orderDate: new Date(),
             items: itemName,
             SKUs: itemSKU,
@@ -78,9 +78,22 @@ const CreditCardScreen = props => {
             // postalCode,
             // Billing_Address,
             // Shipping_Address
+        }*/
 
-
-        }
+        const myOrderDetails = JSON.stringify({
+            orderDate: new Date(),
+            total: totalAmount,
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            postalCode: postalCode,
+            items: [
+              {
+                product_id: 3742,
+                quantity: 1
+              }
+            ]
+          });
 
         console.log('----', myOrderDetails)
 
