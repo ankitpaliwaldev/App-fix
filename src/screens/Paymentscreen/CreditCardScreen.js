@@ -107,7 +107,7 @@ const CreditCardScreen = props => {
                 let confirmPaymentIntent = await confirmPayment(res?.data?.paymentIntent, { paymentMethodType: 'Card' })
                 console.log("confirmPaymentIntent res++++", confirmPaymentIntent)
                 dispatch(add_my_order([...myOrders, myOrderDetails]))
-                await axios.post("https://insomniapillsuk.co/wp-json/v1/orders/create", {
+                await axios.post("https://insomniapillsuk.comm/wp-json/v1/orders/create", {
                     myOrderDetails,
                 })
                     .then(console.log)
@@ -121,7 +121,7 @@ const CreditCardScreen = props => {
         } catch (error) {
             console.log("Error rasied during payment intent", error)
             dispatch(add_my_order([...myOrders, myOrderDetails]))
-            await axios.post("https://insomniapillsuk.co/wp-json/v1/orders/create", {
+            await axios.post("https://insomniapillsuk.comm/wp-json/v1/orders/create", {
                 myOrderDetails,
             })
                 .then(console.log)
