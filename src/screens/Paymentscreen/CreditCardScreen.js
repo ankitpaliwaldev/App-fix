@@ -80,20 +80,20 @@ const CreditCardScreen = props => {
             // Shipping_Address
         }*/
 
-        const myOrderDetails = JSON.stringify({
+        const myOrderDetails = {
             orderDate: new Date(),
             total: totalAmount,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            postalCode: postalCode,
+            firstName: "firstName",
+            lastName: "lastName",
+            email: "ankitemail@gmail.com",
+            postalCode: "302021",
             items: [
               {
                 product_id: 3742,
                 quantity: 1
               }
             ]
-          });
+          };
 
         console.log('----', myOrderDetails)
 
@@ -107,9 +107,8 @@ const CreditCardScreen = props => {
                 let confirmPaymentIntent = await confirmPayment(res?.data?.paymentIntent, { paymentMethodType: 'Card' })
                 console.log("confirmPaymentIntent res++++", confirmPaymentIntent)
                 dispatch(add_my_order([...myOrders, myOrderDetails]))
-                await axios.post("https://insomniapillsuk.comm/wp-json/v1/orders/create", {
-                    myOrderDetails,
-                })
+                await axios.post("https://insomniapillsuk.com/wp-json/v1/orders/create", 
+                    myOrderDetails)
                     .then(console.log)
                     .catch(console.log)
                 setTimeout(() => {
@@ -121,9 +120,9 @@ const CreditCardScreen = props => {
         } catch (error) {
             console.log("Error rasied during payment intent", error)
             dispatch(add_my_order([...myOrders, myOrderDetails]))
-            await axios.post("https://insomniapillsuk.comm/wp-json/v1/orders/create", {
-                myOrderDetails,
-            })
+            await axios.post("https://insomniapillsuk.com/wp-json/v1/orders/create",
+                myOrderDetails
+            )
                 .then(console.log)
                 .catch(console.log)
             setTimeout(() => {
