@@ -89,7 +89,7 @@ const CreditCardScreen = props => {
             postalCode: "302021",
             items: [
               {
-                product_id: 3742,
+                product_id: itemSKU,
                 quantity: 1
               }
             ]
